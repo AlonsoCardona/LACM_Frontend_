@@ -4,62 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorios | Life-SOS</title>
+    <!-- Sesion 1: Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Sección Consultorios</h1>
-        <nav>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="display: inline;"><a href="inicio.html">Inicio</a></li>
-                <li style="display: inline;"> | <a href="consultorios.html">Consultorios</a></li>
-                <li style="display: inline;"> | <a href="salud.html">Salud</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section style="margin-bottom: 40px;">
-            <h2>Directorio de Consultorios</h2>
-            <p>Encuentra consultorios y hospitales cercanos para atención médica.</p>
-            <table border="1" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Teléfono</th>
-                        <th>Especialidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Consultorio Central</td>
-                        <td>Calle Salud 123</td>
-                        <td>555-123-4567</td>
-                        <td>Medicina General</td>
-                    </tr>
-                    <tr>
-                        <td>Clínica Familiar</td>
-                        <td>Avenida Bienestar 456</td>
-                        <td>555-987-6543</td>
-                        <td>Pediatría</td>
-                    </tr>
-                    <tr>
-                        <td>Hospital Vida</td>
-                        <td>Boulevard Esperanza 789</td>
-                        <td>555-222-3333</td>
-                        <td>Urgencias</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
 
-        <section style="margin-bottom: 40px;">
-            <h2>Agendar Cita (próximamente)</h2>
-            <p>Podrás solicitar y gestionar tus citas médicas desde esta sección.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Life-SOS. Todos los derechos reservados.</p>
+    <!-- Sesion 6: Navbar fixed-top con hamburger animado y dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="inicio.html">Life-SOS</a>
+            <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu" aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                    <!-- Sesion 6: Dropdown activo en esta página -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="consultorios.html"
+                           id="dropdownConsultorios" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Consultorios
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownConsultorios">
+                            <li><a class="dropdown-item" href="#directorio">Directorio</a></li>
+                            <li><a class="dropdown-item" href="#citas">Gestión de Citas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="salud.html">Mi Salud</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white px-3 ms-2" href="login.html">Acceder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sesion 5: Hero section bg-dark text-white -->
+    <section class="bg-dark text-white py-5 text-center">
+        <div class="container-fluid py-2">
+            <h1 class="display-4 fw-bold">Consultorios</h1>
+            <p class="lead">Encuentra consultorios médicos y especialistas cerca de ti.</p>
+        </div>
+    </section>
+
+    <!-- Sesion 3: Grid system + Cards para el directorio -->
+    <section class="py-5" id="directorio">
+        <div class="container">
+            <h2 class="mb-4">Directorio de Consultorios</h2>
+            <p class="text-muted mb-4">Encuentra consultorios y hospitales cercanos para atención médica.</p>
+
+            <!-- Sesion 4: Breakpoints multiples col-12 col-md-6 col-lg-4 -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <!-- Sesion 5: Badge de especialidad -->
+                            <span class="badge bg-primary mb-2">Medicina General</span>
+                            <h5 class="card-title">Consultorio Dr. Martínez</h5>
+                            <p class="card-text"><small class="text-muted">Av. Reforma 123, Col. Centro</small></p>
+                            <p class="card-text"><small class="text-muted">555-123-4567</small></p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Agendar cita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Urgencias</span>
+                            <h5 class="card-title">Hospital San José</h5>
+                            <p class="card-text"><small class="text-muted">Calle Juárez 456, Col. Norte</small></p>
+                            <p class="card-text"><small class="text-muted">555-987-6543</small></p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Agendar cita</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Preventiva</span>
+                            <h5 class="card-title">Clínica del Bienestar</h5>
+                            <p class="card-text"><small class="text-muted">Av. Libertad 789, Col. Sur</small></p>
+                            <p class="card-text"><small class="text-muted">555-555-5555</small></p>
+                            <a href="#" class="btn btn-outline-success btn-sm">Agendar cita</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sesion 4: Tabla solo visible en desktop (d-none d-lg-block) -->
+            <div class="d-none d-lg-block">
+                <h4 class="mb-3">Resumen en tabla</h4>
+                <div class="table-responsive table-life">
+                    <table class="table table-hover table-bordered align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Especialidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Consultorio Dr. Martínez</td>
+                                <td>Av. Reforma 123, Col. Centro</td>
+                                <td>555-123-4567</td>
+                                <td><span class="badge bg-primary">Medicina General</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hospital San José</td>
+                                <td>Calle Juárez 456, Col. Norte</td>
+                                <td>555-987-6543</td>
+                                <td><span class="badge bg-danger">Urgencias / Especialidades</span></td>
+                            </tr>
+                            <tr>
+                                <td>Clínica del Bienestar</td>
+                                <td>Av. Libertad 789, Col. Sur</td>
+                                <td>555-555-5555</td>
+                                <td><span class="badge bg-success">Medicina Preventiva</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sesion 3: Sección citas con grid col-12 col-md-8 / col-md-4 -->
+    <section class="py-5 bg-light" id="citas">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8">
+                    <h2 class="mb-3">Próximamente: Gestión de Citas</h2>
+                    <p>Podrás solicitar y gestionar tus citas médicas desde esta sección. Recibirás confirmaciones y recordatorios automáticos.</p>
+                </div>
+                <!-- Sesion 5: Badge informativo -->
+                <div class="col-12 col-md-4 text-center mt-3 mt-md-0">
+                    <span class="badge bg-warning text-dark fs-6 p-3">Disponible pronto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sesion 1: Footer Bootstrap -->
+    <footer class="bg-dark text-white text-center py-4 mt-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Life-SOS. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Sesion 1: Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
