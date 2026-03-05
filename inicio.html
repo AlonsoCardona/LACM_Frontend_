@@ -52,52 +52,78 @@
     </div>
 
     <!-- Sesion 5: Hero section bg-dark text-white -->
-    <section class="hero-section text-white py-5 text-center">
-        <div class="container-fluid py-3">
-            <!-- Sesion 2: Tipografía Bootstrap display-4, lead -->
-            <h1 class="display-4 fw-bold">Bienvenido a Life-SOS</h1>
-            <p class="lead mb-4"><strong>Tu salud y seguridad, siempre a la mano.</strong></p>
-            <p class="mb-4">Life-SOS es tu plataforma para gestionar tu información médica, recibir recomendaciones personalizadas y acceder rápidamente a ayuda en caso de emergencia.</p>
-            <a href="index.html" class="btn btn-danger btn-lg me-2">Registrarme</a>
-            <a href="login.html" class="btn btn-outline-light btn-lg">Iniciar sesión</a>
+    <!-- Sesion 7: Hero mejorado con imagen y jerarquía visual -->
+    <section class="hero-section text-white py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <!-- Sesion 7: Imagen → Llama atención -->
+                <div class="col-12 col-md-5 text-center">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop" 
+                         class="img-fluid rounded shadow" 
+                         alt="Servicios médicos Life-SOS">
+                </div>
+                <!-- Sesion 7: Contenido con jerarquía visual -->
+                <div class="col-12 col-md-7">
+                    <!-- Sesion 7: Título → Define propósito -->
+                    <h1 class="display-4 fw-bold mb-3">Bienvenido a Life-SOS</h1>
+                    <p class="lead mb-3"><strong>Tu salud y seguridad, siempre a la mano.</strong></p>
+                    <!-- Sesion 7: Texto → Explica brevemente -->
+                    <p class="mb-4">Life-SOS es tu plataforma para gestionar tu información médica, recibir recomendaciones personalizadas y acceder rápidamente a ayuda en caso de emergencia.</p>
+                    <!-- Sesion 7: Botones → Acción clara -->
+                    <div class="d-grid gap-2 d-sm-flex">
+                        <a href="index.html" class="btn btn-danger btn-lg px-4">Registrarme</a>
+                        <a href="login.html" class="btn btn-outline-light btn-lg px-4">Iniciar sesión</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Sesion 3: Grid system + Cards para Acceso rápido -->
-    <section class="py-5 bg-light" id="acceso-rapido">
+    <!-- Sesion 7: Cards con imágenes, jerarquía visual y botones funcionales -->
+    <section class="py-5 bg-light" id="servicios">
         <div class="container">
             <!-- Sesion 2: Spacing mb-4, text-center -->
-            <h2 class="mb-4 text-center">Acceso rápido</h2>
+            <h2 class="mb-4 text-center">Nuestros Servicios</h2>
             <!-- Sesion 4: Breakpoints multiples col-12 col-md-6 col-lg-4 -->
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow-sm h-100 text-center">
-                        <div class="card-body py-4">
+                    <div class="card shadow-sm h-100">
+                        <!-- Sesion 7: Imagen representativa con img-fluid -->
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Consultorios médicos">
+                        <div class="card-body d-flex flex-column">
                             <!-- Sesion 5: Badge de color -->
-                            <span class="badge bg-primary mb-3 fs-6">Directorio</span>
-                            <h5 class="card-title">Consultorios</h5>
-                            <p class="card-text">Encuentra consultorios médicos y especialistas cerca de ti. Agenda citas y recibe recordatorios.</p>
-                            <a href="consultorios.html" class="btn btn-outline-primary">Ver consultorios</a>
+                            <span class="badge bg-primary mb-3 align-self-center fs-6">Directorio</span>
+                            <!-- Sesion 7: Título claro -->
+                            <h5 class="card-title text-center">Consultorios</h5>
+                            <!-- Sesion 7: Descripción breve (máximo 3 líneas) -->
+                            <p class="card-text text-center">Encuentra consultorios médicos y especialistas cerca de ti. Agenda citas fácilmente.</p>
+                            <!-- Sesion 7: Botón con mt-auto para alinear al final -->
+                            <a href="consultorios.html" class="btn btn-primary mt-auto">Ver consultorios</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow-sm h-100 text-center">
-                        <div class="card-body py-4">
-                            <span class="badge bg-success mb-3 fs-6">Bienestar</span>
-                            <h5 class="card-title">Mi Salud</h5>
-                            <p class="card-text">Recibe alertas y consejos personalizados. Mantén un registro de tus indicadores de salud.</p>
-                            <a href="salud.html" class="btn btn-outline-success">Ver mi salud</a>
+                    <div class="card shadow-sm h-100">
+                        <!-- Sesion 7: Imagen representativa con img-fluid -->
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Salud y bienestar">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-3 align-self-center fs-6">Bienestar</span>
+                            <h5 class="card-title text-center">Mi Salud</h5>
+                            <p class="card-text text-center">Recibe alertas y consejos personalizados. Mantén un registro de tus indicadores de salud.</p>
+                            <a href="salud.html" class="btn btn-success mt-auto">Ver mi salud</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow-sm h-100 text-center">
-                        <div class="card-body py-4">
-                            <span class="badge bg-danger mb-3 fs-6">Urgente</span>
-                            <h5 class="card-title">Emergencia</h5>
-                            <p class="card-text">En caso de accidente, tu información médica estará disponible. Alerta a tus contactos de confianza.</p>
-                            <a href="#emergencia" class="btn btn-outline-danger">Más info</a>
+                    <div class="card shadow-sm h-100">
+                        <!-- Sesion 7: Imagen representativa con img-fluid -->
+                        <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Servicios de emergencia">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-danger mb-3 align-self-center fs-6">Urgente</span>
+                            <h5 class="card-title text-center">Emergencia</h5>
+                            <p class="card-text text-center">En caso de accidente, tu información médica estará disponible. Alerta a tus contactos.</p>
+                            <a href="#emergencia" class="btn btn-danger mt-auto">Más información</a>
                         </div>
                     </div>
                 </div>

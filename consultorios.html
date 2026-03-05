@@ -47,10 +47,21 @@
     </nav>
 
     <!-- Sesion 5: Hero section bg-dark text-white -->
-    <section class="bg-dark text-white py-5 text-center">
-        <div class="container-fluid py-2">
-            <h1 class="display-4 fw-bold">Consultorios</h1>
-            <p class="lead">Encuentra consultorios médicos y especialistas cerca de ti.</p>
+    <!-- Sesion 7: Hero mejorado con imagen y jerarquía visual -->
+    <section class="bg-dark text-white py-5">
+        <div class="container py-3">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-5 text-center">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=500&h=500&fit=crop" 
+                         class="img-fluid rounded shadow" 
+                         alt="Consultorios médicos">
+                </div>
+                <div class="col-12 col-md-7 text-center text-md-start">
+                    <h1 class="display-4 fw-bold">Consultorios</h1>
+                    <p class="lead mb-3">Encuentra consultorios médicos y especialistas cerca de ti.</p>
+                    <a href="#directorio" class="btn btn-light btn-lg">Ver directorio</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -61,38 +72,46 @@
             <p class="text-muted mb-4">Encuentra consultorios y hospitales cercanos para atención médica.</p>
 
             <!-- Sesion 4: Breakpoints multiples col-12 col-md-6 col-lg-4 -->
+            <!-- Sesion 7: Cards mejoradas con imágenes y jerarquía visual -->
             <div class="row g-4 mb-4">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <div class="card-body">
+                        <!-- Sesion 7: Imagen representativa -->
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Consultorio médico">
+                        <div class="card-body d-flex flex-column">
                             <!-- Sesion 5: Badge de especialidad -->
-                            <span class="badge bg-primary mb-2">Medicina General</span>
+                            <span class="badge bg-primary mb-2 align-self-start">Medicina General</span>
                             <h5 class="card-title">Consultorio Dr. Martínez</h5>
                             <p class="card-text"><small class="text-muted">Av. Reforma 123, Col. Centro</small></p>
                             <p class="card-text"><small class="text-muted">555-123-4567</small></p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Agendar cita</a>
+                            <!-- Sesion 7: Botón con mt-auto -->
+                            <a href="login.html" class="btn btn-primary btn-sm mt-auto">Agendar cita</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <div class="card-body">
-                            <span class="badge bg-danger mb-2">Urgencias</span>
+                        <!-- Sesion 7: Imagen representativa -->
+                        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Hospital">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-danger mb-2 align-self-start">Urgencias</span>
                             <h5 class="card-title">Hospital San José</h5>
                             <p class="card-text"><small class="text-muted">Calle Juárez 456, Col. Norte</small></p>
                             <p class="card-text"><small class="text-muted">555-987-6543</small></p>
-                            <a href="#" class="btn btn-outline-danger btn-sm">Agendar cita</a>
+                            <a href="login.html" class="btn btn-danger btn-sm mt-auto">Agendar cita</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100">
-                        <div class="card-body">
-                            <span class="badge bg-success mb-2">Preventiva</span>
+                        <!-- Sesion 7: Imagen representativa -->
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&h=300&fit=crop" class="card-img-top img-fluid" alt="Clínica">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-success mb-2 align-self-start">Preventiva</span>
                             <h5 class="card-title">Clínica del Bienestar</h5>
                             <p class="card-text"><small class="text-muted">Av. Libertad 789, Col. Sur</small></p>
                             <p class="card-text"><small class="text-muted">555-555-5555</small></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Agendar cita</a>
+                            <a href="login.html" class="btn btn-success btn-sm mt-auto">Agendar cita</a>
                         </div>
                     </div>
                 </div>
